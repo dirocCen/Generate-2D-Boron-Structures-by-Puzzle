@@ -19,15 +19,14 @@
 ```
 python main_puzzle_Boron_plane_primitive.py
 ```  
-功能：  
+### 功能：  
 根据选择的拼图碎片和原胞，拼出所有可能的结构，其中任意的碎片都可以用任意次，且满足边界周期条件。
 
-一般需要改的参数：
+### 一般需要改的参数：
 19atoms_boron_envir_notINatoms.mat 中的 "cluster":拼图的碎片，和"perms_1":对称操作。
 
 
-
-程序说明：  
+### 程序说明：  
 可以直接从main.py函数开始看起，其中的几个关键的函数：  
 
 prep_path()：准备好各种路径，primitive_path 是原胞，savelog_path 中间输出信息，write_seq_path 将结构信息写成seq格式，save_Magcor_path 保存Mag和Cor的信息。
@@ -41,8 +40,7 @@ find_order（NNindex）：根据每个原子的近邻关系确定拼图的顺序
 exceed_boundary（）：在拼的过程中如果中间结构太多了内存会不够用，所以设定当结构数len(Mag1)>10^6时，开始分类计算深度优先，时间换空间。  
 
 
-
-参数说明：  
+### 参数说明：  
 Mag1存储的是每个位置的元素信息atom_type。  
 
 cor1存储的是使用的碎片信息。  
